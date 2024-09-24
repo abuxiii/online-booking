@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Ordering System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>MENU <img src="icons/menu.svg" alt="Menu"></h1>
+        <div class="menu">
+            <div class="menu-item">
+                <h2>Burger</h2>
+                <p>45 000 UZS</p>
+                <button onclick="order('Burger', 45000)">Order <img src="icons/korzina.svg" alt="Cart"></button>
+            </div>
+            <div class="menu-item">
+                <h2>Pizza</h2>
+                <p>65 000 UZS</p>
+                <button onclick="order('Pizza', 65000)">Order <img src="icons/korzina.svg" alt="Cart"></button>
+            </div>
+            <div class="menu-item">
+                <h2>Pasta</h2>
+                <p>55 000 UZS</p>
+                <button onclick="order('Pasta', 55000)">Order <img src="icons/korzina.svg" alt="Cart"></button>
+            </div>
+        </div>
+        <div class="order-summary">
+            <h2>Your Order</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price">Total: $0.00</p>
+            <h3>Scan QR Code:</h3>
+            <div id="qrcode"></div>
+            <button onclick="generatePDF()">Download Receipt as PDF</button>
+        </div>
+        <div class="autor">
+            Created and Designed by Abubakr Inogomov
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
